@@ -48,7 +48,7 @@ http://earthquake.usgs.gov/fdsnws/event/1/query.csv?starttime=1950-01-01%2000:00
 
 ### Python
 
-Let's get the whole world
+Let's get the whole world of earthquakes. For each day, download the full set of earthquake data and save it into a date-stamped file.
 
 ~~~py
 from datetime import date, timedelta
@@ -58,10 +58,9 @@ END_DATE = date(2015,7,28)
 
 BASE_URL = "http://earthquake.usgs.gov/fdsnws/event/1/query.csv"
 u_params = {
-  'orderby': 'time-asc',
+  'orderby': 'time-asc'
 } 
 
-# http://stackoverflow.com/a/15973829/160863
 for i in range((END_DATE - START_DATE).days + 1):
     day = START_DATE + timedelta(days = i)
     u_params['starttime'] = "%s 00:00:00" % day
@@ -72,8 +71,20 @@ for i in range((END_DATE - START_DATE).days + 1):
     with open(fname, 'w') as f:
       print(fname)
       f.write(resp.text)
+~~~
 
 
+Concat the files
 
-
+~~~py
+from glob import glob
+oname = "/tmp/usgs-quakes--1970-01-01_2015-07-28.csv"
+files = glob('*.csv')
+with open(oname, 'w') as o:
+  # write headers from the first file
+  o.write(open(files[0]).readline())
+  for fname in files:
+    with open(fname) as f:
+      f.readline() # skip first line
+      o.write(f.read())  
 ~~~

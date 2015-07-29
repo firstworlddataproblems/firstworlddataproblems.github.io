@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<!-- 
+State of California 2013 master template
+Version 2013.xx.xx
+
+Based on 320 and Up boilerplate extension
+-->
+
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if (gt IE 9)]><!--> <html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>California Office of Statewide Health Planning and Development</title>
+<meta name="Author" content="State of California" />
+<meta name="Description" content="State of California" />
+<meta name="Keywords" content="California, government" />
+
+
+<!-- head content, for all pages -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True"> <!-- for Blackberry, AvantGo -->
+<meta name="MobileOptimized" content="320"> <!-- for Windows mobile -->
+<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/colorscheme_oshpd.css">
+<link rel="stylesheet" href="/css/oshpd.css">
+
+<link rel="stylesheet" media="print" href="/css/print.css">
+<!-- For progressively larger displays -->
+<!-- <link rel="stylesheet" media="only screen and (min-width: 480px)" href="/css/480.css"> -->
+<link rel="stylesheet" media="only screen and (min-width: 600px)" href="/css/600.css">
+<link rel="stylesheet" media="only screen and (min-width: 768px)" href="/css/768.css">
+<!-- <link rel="stylesheet" media="only screen and (min-width: 992px)" href="/css/992.css"> -->
+<link rel="stylesheet" media="only screen and (min-width: 1280px)" href="/css/1280.css">
+<!-- For Retina displays -->
+<!-- <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5)" href="/css/2x.css"> -->
+
+
+<!-- selectivizr.com, emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8 -->
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="/javascript/libs/selectivizr-min.js"></script>
+<![endif]-->
+
+<!-- modernizr.com, feature detection -->
+<script src="/javascript/libs/modernizr-2.0.6.min.js"></script>
+
+<!-- For iPad 3-->
+<link rel="apple-touch-icon" sizes="144x144" href="/images/template2013/apple-touch-icon-144x144.png">
+<!-- For iPhone 4 -->
+<link rel="apple-touch-icon" sizes="114x114" href="/images/template2013/apple-touch-icon-114x114.png">
+<!-- For iPad 1-->
+<link rel="apple-touch-icon" sizes="72x72" href="/images/template2013/apple-touch-icon-72x72.png">
+<!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="apple-touch-icon" href="/images/template2013/apple-touch-icon-57x57.png">
+<!-- For Nokia -->
+<link rel="shortcut icon" href="/images/template2013/apple-touch-icon-57x57.png">
+<!-- For everything else -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!--Microsoft. Activate ClearType. Use highest compatibility mode, enable Chrome Frame -->
+<!--[if IE]>
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+
+<script src="/javascript/libs/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/javascript/scripts.js"></script>
+<script src="/javascript/oshpd.js"></script>
+<script src="/javascript/gatag.js"></script>
+
+
+<!--[if lt IE 9]>
+<script src="/javascript/libs/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="two_column clearfix">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4417154-1']); // you MUST replace this with your google analytics profile code, either from your own google account, or contact OTech to have one set up for you
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', '.ca.gov']);
+  _gaq.push(['_trackPageview']);
+
+  _gaq.push(['b._setAccount', 'UA-3419582-2']); // statewide analytics - do not remove or change
+  _gaq.push(['b._setDomainName', '.ca.gov']);
+  _gaq.push(['b._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- SCRIPT TO AUTOMATE ANALYTICS EVENTS FOR DOWNLOADS -->
+
+<script type="text/javascript">
+if (typeof jQuery != 'undefined') {
+    jQuery(document).ready(function($) {
+        var filetypes = /\.(zip|exe|pdf|doc|docx|xls|xlsx|ppt|pptx|mp3)$/i;
+        var baseHref = '';
+        if (jQuery('base').attr('href') != undefined)
+            baseHref = jQuery('base').attr('href');
+        jQuery('a').each(function() {
+            var href = jQuery(this).attr('href');
+            if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
+                jQuery(this).click(function() {
+                    var extLink = href.replace(/^https?\:\/\//i, '');
+                    _gaq.push(['_trackEvent', 'External', 'Click', extLink]);
+                    if (jQuery(this).attr('target') != undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+                        setTimeout(function() { location.href = href; }, 200);
+                        return false;
+                    }
+                });
+            }
+            else if (href && href.match(/^mailto\:/i)) {
+                jQuery(this).click(function() {
+                    var mailLink = href.replace(/^mailto\:/i, '');
+                    _gaq.push(['_trackEvent', 'Email', 'Click', mailLink]);
+                });
+            }
+            else if (href && href.match(filetypes)) {
+                jQuery(this).click(function() {
+                    var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                    var filePath = href;
+                    _gaq.push(['_trackEvent', 'Download', 'Click-' + extension, filePath]);
+                    if (jQuery(this).attr('target') != undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+                        setTimeout(function() { location.href = baseHref + href; }, 200);
+                        return false;
+                    }
+                });
+            }
+        });
+    });
+}
+</script>
+
+<!-- ABOVE SCRIPT TO AUTOMATE ANALYTICS EVENTS FOR DOWNLOADS -->
+
+</script>
+
+<!-- Google Suggest -->
+<script type="text/javascript">
+	document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://" : "http://") + "www.google.com/jsapi' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	google.load('search', '1');
+	google.setOnLoadCallback(function() {
+		google.search.CustomSearchControl.attachAutoCompletion(
+			'001779225245372747843:mdsmtl_vi1a', // Step 6: Update this value with your search engine unique ID. Submit a request to the OTech Service Desk if you don't already know your unique search engine ID.
+			document.getElementById('search_local_textfield'),
+			'local_form');
+	});
+</script>
+
+<header role="banner">
+	<div id="skip_to_content"><a href="#main_content">Skip to Main Content</a></div>
+
+	<div class="phone_hdr">
+		<div class="phone_hd_left">
+			<a class="p_h_button p_h_menu" onclick="toggle_menu();"><img src="/images/template2013/clear.gif" alt="Menu" /></a>
+		</div>
+		<div class="phone_hd_right">
+			<a class="p_h_button p_h_contact" href="/General_Info/Contact_OSHPD.html"><img src="/images/template2013/clear.gif" alt="Contact Us" /></a>
+			<a class="p_h_button p_h_search" onclick="toggle_search();"><img src="/images/template2013/clear.gif" alt="Search" /></a>
+		</div>
+		<div class="logo_and_banner">
+			<div class="head_cagov_logo"><a href="http://www.ca.gov/"><img src="/images/template2013/oshpd/header_ca.gov.png" alt="CA.gov" /></a></div>
+			<div class="head_organization_banner"><a href="/"><img src="/images/template2013/oshpd/header_oshpd.png" alt="OSHPD Logo" /></a></div>
+		</div>
+	</div>
+
+	<div id="head_search">
+		<form id="local_form" action="http://www.google.com/cse"> <!-- the form action will be changed using javascript -->
+			<div class="textfield_container">
+				<label for="search_local_textfield" accesskey="s" class="hidden">Search this site: </label>
+				<input type="text" name="q" id="search_local_textfield" size="40" autocomplete="off" value="Search OSHPD" onfocus="if(this.value=='Search')this.value=''" onblur="if(this.value=='')this.value='Search'" />
+				<input type="hidden" name="cx" value="001779225245372747843:mdsmtl_vi1a" />
+				<input type="hidden" name="cof" value="" /> <!-- this value will be set using javascript -->
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="hidden" name="nojs" value="1" />
+
+			</div>
+			<div class="submit_container clearfix">
+				<input type="image" alt="Search" title="Search" name="submit" src="/images/template2013/clear.gif" />
+			</div>
+		</form>
+	</div>
+	
+	<nav id="navigation" class="mininav">
+		<ul id="nav_list">
+			<li><a href="/" class="nav_level1_link"><span id="nav_home_container"></span><img src="/images/template2013/clear.gif" alt="Home" />&nbsp;</a>
+			</li>
+			<li><a href="/About.html" class="nav_level1_link">About OSHPD</a>
+				<div class="nav_panel">
+					<ul>
+						<li><a href="/AboutUs.html">About OSHPD</a></li>
+						<li><a href="/Connect.html">Connect with OSHPD</a></li>
+						<!--<li><a href="/Divisions.html">Divisions</a></li>-->
+						<!--<li><a href="/Boards-and-Commissions.html">Boards and Commissions</a></li>-->
+						<li><a href="/General_Info/Jobs_and_exams.html">Jobs and Exams</a></li>
+						<li><a href="/LawsRegs/ProgramStatutes.html">Laws and Regulations</a></li>
+						<li><a href="/General_Info/Public_Meetings.html">Public Meetings, Notices and Agendas</a></li>
+						<li><a href="/Publications.html">Publications and Reports</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/Building-Saftety-and-Finance.html" class="nav_level1_link">Building Safety/Finance</a>
+				<div class="nav_panel">
+					<ul>
+						<li class="division"><a href="/FDD/">Facilities Development Division</a></li>
+						<li><a href="/FDD/Plan_Review/">Plan Review</a></li>
+						<li><a href="/FDD/Pre-Approval/index.html">Preapprovals</a></li>
+						<li><a href="/FDD/Plan_Review/">Construction</a></li>
+						<li><a href="/FDD/seismic_compliance/">Seismic Safety</a></li>
+						<li><a href="/FDD/">Building Standards</a></li>
+						<li><a href="/Boards/HBSB/index.html">Hospital Building Safety Board (HBSB)</a></li>
+						<li><a href="/FDD/InspectServices/index.html">Hospital Inspector Certification</a></li>
+						<li><a href="https://eserv.oshpd.ca.gov/CitizenAccess/">eServices Client Access</a></li>
+						<li class="division"><a href="/CalMort/">Cal-Mortgage</a> </li>
+						<li><a href="/CalMort/">Loan Insurance</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/Healthcare-Data.html" class="nav_level1_link">Healthcare Data</a>
+				<div class="nav_panel">
+					<ul>
+						<li class="division"><a href="/HID/">Healthcare Information Division</a></li>
+						<li><a href="/HID/DataFlow/">Find Data</a></li>
+						<li><a href="/HID/Data_Request_Center/">Request Data</a></li>
+						<li><a href="/General_Info/Submit_Data.html">Submit Data</a></li>
+						<li><a href="//chhs.data.ca.gov">CHHS Open Data Portal</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/Healthcare-Workforce.html" class="nav_level1_link">Healthcare Workforce</a>
+				<div class="nav_panel">
+					<ul>
+						<li class="division"><a href="/HWDD/">Healthcare Workforce Development Division</a></li>
+						<li><a href="/HWDD/CalPCO.html">California Primary Care Office (PCO)</a></li>
+						<li><a href="/HWDD/SLRP.html">California State Loan Repayment Program (SLRP)</a></li>
+						<li><a href="/HWDD/HWC/">California Healthcare Workforce Clearinghouse</a></li>
+						<li><a href="/HWDD/Research_Policy_Planning_GIS.html">GIS and Data</a></li>
+						<li><a href="/HWDD/HCTP.html">Health Careers Training Program (HCTP)</a></li>
+						<li><a href="/HWDD/HWPP.html">Health Workforce Pilot Projects Program (HWPP)</a></li>
+						<li><a href="/Reform/">Healthcare Reform (HCR)</a></li>
+						<li><a href="/HWDD/Shortage_Designation_Prog.html">Shortage Designation Program (SDP)</a></li>
+						<li><a href="/HWDD/Song_Brown_Prog.html">Song-Brown Training Program</a></li>
+						<li><a href="/HWDD/WET.html">Workforce Education and Training (WET)</a></li>
+						<li class="division"><a href="/HPEF/">Health Professions Education Foundation</a> </li>
+						<li><a href="/HPEF/applications.html">Loan Repayments for Healthcare Professionals</a></li>
+						<li><a href="/HPEF/applications.html">Student Scholarships</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+<div id="main_content" class="clearfix">
+	<div class="content_left_column clearfix">
+<!-- Left Column -->
+		<div class="add_maincontent_padding">
+		<p>The Office of Statewide Health Planning and Development (OSHPD) office locations and main telephone/fax numbers are:</p>
+        <h2>400 R Street<br />
+          Sacramento, CA 95811-6213</h2>
+        <h3>Executive Offices:</h3>
+        <div class="blue contact-card">
+			<p class="name">Director's Office, Suite 310</p>
+            <table>
+				<tr><td>Phone:</td><td>(916) 326-3600</td></tr>
+            	<tr><td>Fax:</td><td>(916) 322-2531</td></tr>
+            	<tr><td>Email:</td><td><a href="mailto:OSHPDDO@oshpd.ca.gov">OSHPDDO@oshpd.ca.gov</a></td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name">Legislative Affairs, Suite 310</p>
+			<table>
+				<tr><td>Phone:</td><td>(916) 326-3600</td></tr>
+				<tr><td>Fax:</td><td>(916) 322-2531</td></tr>
+				<tr><td>Email:</td><td><a href="mailto:OSHPDDO@oshpd.ca.gov">OSHPDDO@oshpd.ca.gov</a></td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name">Public Affairs, Suite 310</p>
+			<table>
+            <tr><td>Phone:</td><td>(916) 326-3600</td></tr>
+            <tr><td>Fax:</td><td>(916) 322-2531</td></tr>
+            <tr><td>Email:</td><td><a href="mailto:OSHPDPress@oshpd.ca.gov">OSHPDPress@oshpd.ca.gov</a></td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name">Legal Office, Suite 320</p>
+			<table>
+            <tr><td>Phone:</td><td>(916) 326-3610</td></tr>
+            <tr><td>Fax:</td><td>(916) 322-2561</td></tr>
+            <tr><td>Email:</td><td><a href="mailto:OSHPDLegalOffice@oshpd.ca.gov">OSHPDLegalOffice@oshpd.ca.gov</a></td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name">Equal Employment Opportunity Office, Suite 312</p>
+			<table>
+            <tr><td>Phone:</td><td>(916) 326-3261</td></tr>
+            <tr><td>Fax:</td><td>(916) 322-2559</td></tr>
+            <tr><td>Email:</td><td><a href="mailto:OSHPDEEO@oshpd.ca.gov">OSHPDEEO@oshpd.ca.gov</a></td></tr>
+			</table>
+        </div>
+        <h3>Divisions:</h3>
+		<div class="blue contact-card">
+			<p class="name"><a href="/Admin/index.html">Administration Division</a>, Suite 359</p>
+			<table>
+            <tr><td>Phone:</td><td>(916) 326-3200</td></tr>
+            <tr><td>Admin Fiscal Services Fax:</td><td>(916) 322-2527</td></tr>
+            <tr><td>Business Services Fax:</td><td>(916) 322-2530</td></tr>
+			</table>
+		</div>
+		<div class="blue sub contact-card">
+			<p class="name">Human Resources, Suite 364</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3260</td></tr>
+			<tr><td>Fax:</td><td>(916) 322-2515</td></tr>
+			</table>
+			<p class="name">Small Business and DVBE Advocate</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3205</td></tr>
+			<tr><td>Fax:</td><td>(916) 322-2530</td></tr>
+			<tr><td>Email:</td><td><a href="mailto:Brian.Reilly@oshpd.ca.gov">SB/DVBE Advocate Brian Reilly</a></td></tr>
+			</table>
+        </div>
+		<div class="blue contact-card">
+			<p class="name"><a href="/FDD/index.html">Facilities Development Division (Sacramento Headquarters)</a>, Suite 200</p>
+			<table>
+            <tr><td>Phone:</td><td>(916) 440-8300</td></tr>
+            <tr><td>Fax:</td><td>(916) 324-9188</td></tr>
+            <tr><td>Email:</td><td><a href="mailto:FDDwebmaster@oshpd.ca.gov">E-mail FDD Webmaster</a></td></tr>
+			</table>		
+		</div>
+		<div class="blue sub contact-card">
+			<p class="name">Hospital Building  Safety Board</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 440-8453</td></tr>
+			<tr><td>Fax:</td><td>(916) 324-9188</td></tr>
+			<tr><td>Email:</td><td><a href="mailto:HBSB@oshpd.ca.gov">E-mail the Hospital Building Safety Board</a></td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+				<p class="name"><a href="/CalMort/index.html">Cal-Mortgage Loan Insurance Division</a>, Suite 470</p>
+			<table>
+				<tr><td>Phone:</td><td>(916) 319-8800</td></tr>
+				<tr><td>Fax:</td><td>(916) 445-2837</td></tr>
+				<tr><td>Email:</td><td><a href="mailto:cminsure@oshpd.ca.gov">E-mail Cal-Mortgage</a></td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name">Facilities Development Division (Southern California)</p>
+			<table>
+			<tr><td>Address:</td><td>Water District Headquarters<br />Suite 2-500<br />700 N. Alameda Street<br />Los Angeles, CA 90012</td></tr>
+			<tr><td>Phone:</td><td>(213) 897-0166</td></tr>
+            <tr><td>Fax:</td><td>(213) 897-0168</td></tr>
+            <tr><td>Email:</td><td><a href="mailto:FDDwebmaster@oshpd.ca.gov">E-mail FDD (Southern California)</a></td></tr>
+			</table>
+        </div>
+		<div class="blue contact-card">
+			<p class="name"><a href="/HID/index.html">Healthcare Information Division (HID)</a>, Suite 250</p>
+			<table>
+            <tr><td>Phone:</td><td>(916) 326-3802</td></tr>
+            <tr><td>Fax:</td><td>(916) 324-9242</td></tr>
+            <tr><td>Email:</td><td><a href="mailto:hircweb@oshpd.ca.gov">E-mail HID</a></td></tr>
+			</table>
+		</div>
+		<div class="blue sub contact-card">
+			<p class="name">Accounting &amp; Reporting Systems Section (ARSS), Suite 250</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3854</td></tr>
+			<tr><td>Fax:</td><td>(916) 327-0377</td></tr>
+			</table>
+			<p class="name">Healthcare Information Resource Center (HIRC), Suite 250</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3802</td></tr>
+			<tr><td>Fax:</td><td>(916) 324-9242</td></tr>
+			<tr><td>Email:</td><td><a href="mailto:hircweb@oshpd.ca.gov">E-mail HIRC</a></td></tr>
+			</table>
+			<p class="name">Healthcare Outcomes Center (HOC), Suite 250</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3861</td></tr>
+			<tr><td>Fax:</td><td>(916) 322-9718</td></tr>
+			<tr><td>Email:</td><td><a href="mailto:HOC@oshpd.ca.gov?subject=InternetInquiry">E-mail HOC</a></td></tr>
+			</table>
+			<p class="name">Patient Data Section (PDS), Suite 270</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3920</td></tr>
+			<tr><td>Main Office:</td><td>(916) 326-3935</td></tr>
+			<tr><td>Fax:</td><td>(916) 327-1262</td></tr>
+			<tr><td>Email:</td><td><a href="mailto:MIRCal@oshpd.ca.gov">E-mail MIRCal</a></td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name"><a href="/HWDD/index.html">Healthcare Workforce Development Division</a>, Suite 330</p>
+			<table>
+            <tr><td>Phone:</td><td>(916) 326-3700</td></tr>
+            <tr><td>Fax:</td><td>(916) 322-2588</td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name"><a href="/HPEF/index.html">Health Professions Education Foundation</a>, Suite 460</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3640</td></tr>
+            <tr><td>Fax:</td><td>(916) 324-6585</td></tr>
+			</table>
+		</div>
+		<div class="blue contact-card">
+			<p class="name">Information Technology Services Division (ITSD), Suite 380</p>
+			<table>
+			<tr><td>Phone:</td><td>(916) 326-3999</td></tr>
+			<tr><td>Fax:</td><td>(916) 322-1693</td></tr>
+			</table>
+		</div>
+		<div class="add_padding" id="modified-date"></div>
+		</div>
+<!-- End Left column -->
+	</div>
+	<div class="content_right_column clearfix">
+<!-- Right column -->
+		<div class="container_style_e">
+			<h5>Connect With Us</h5>
+			<div id="homepage-connect" class="add_side_padding" style="width:80%; margin:0 auto;">
+			  <p>
+				  <a href="/signup.html"><img src="/images/homepage/icon-email.png" alt="Subscribe to Email"></a>
+				  <a href="http://twitter.com/CA_OSHPD"><img src="/images/homepage/logo-twitter.png" alt="OSHPD on Twitter"></a>
+				  <a href="http://www.facebook.com/pages/California-Office-of-Statewide-Health-Planning-and-Development-OSHPD/102728876553338"><img src="/images/homepage/logo-facebook.png"  alt="OSHPD on Facebook"></a>
+				  <a href="https://www.youtube.com/channel/UCWZlucPkJlQa8bvmf39SRqw"><img src="/images/homepage/logo-youtube.png" alt="Visit OSHPD on YouTube"></a>
+				  <a href="http://www.linkedin.com/company/office-of-statewide-health-planning-and-development"><img src="/images/homepage/logo-linkedin.png" alt="OSHPD on LinkedIn"></a>
+			 </td></tr>
+			</div>
+		  </div>
+
+		<div id="homepage-id" class="container_style_e">
+			<h5>&nbsp;</h5>
+			<div class="add_side_padding">
+				<p><a href="http://gov.ca.gov/"><img src="/images/homepage/id-gov.gif" alt="Governor Jerry Brown"></a></p>
+                <p><a href="http://www.chhs.ca.gov/Documents/SecretaryDooleyBioPDF.pdf"><img src="/images/homepage/id-sec.jpg" alt="Secretary Diane S. Dooley"></a></p>
+                <p><a href="General_Info/Director.html"><img src="/images/homepage/id-dir.png" alt="OSHPD Director Robert David"></a></p>
+			</div>
+		</div>
+        
+        <div class="container_style_e">
+        	<h5>&nbsp;</h5>
+            <div id="simple-slider" class="add_side_padding" style="text-align:center;">
+            	<p><a href="http://www.cdph.ca.gov/programs/cdcb/Documents/CDPH-CAWellnessPlan2014%20(Agency%20Approved).FINAL.2-27-14(Protected).pdf"><img class="fit-img" src="http://oshpd.ca.gov/images/new/ca-wellness-plan-2014.jpg" alt="Covered California"></a></p>
+            	<p><a href="http://www.coveredca.com"><img src="/images/homepage/banner-covered-ca.png" alt="Covered California"></a></p>
+                <p><a href="http://registertovote.ca.gov/"><img src="http://www.sos.ca.gov/images/vers3/rov.jpg" alt="Register to Vote"/></a></p>
+                <p><a href="http://www.keepyourhomecalifornia.org/"><img src="/images/homepage/banner-keepyourhome.jpg" alt="Keep Your Home California"></a></p>
+				
+				<p><a href="http://sco.ca.gov/upd.html"><img src="/images/homepage/banner-unclaimed-property.jpg" alt="Search Unclaimed Property"></a></p>
+				
+            </div>
+        </div>
+
+	</div>
+
+	<div class="cleaner"></div>
+
+</div>
+
+
+<footer id="footer_2" class="clearfix">
+	<div>
+		<a href="#skip_to_content">Back to Top</a><a href="/General_Info/SiteMap.html">Site Map</a><a href="/General_Info/Conditions_of_Use.html">Conditions of Use</a> <a href="/General_Info/Privacy.html">Privacy Policy</a> <a href="/General_Info/Accessibility_Policy.html">Accessibility</a> <a href="/General_Info/Contact_OSHPD.html">Contact OSHPD</a><a href="javascript:ContactWebmaster();">Contact Webmaster</a>
+	</div>
+
+	<div>
+		Copyright &copy; 2014 State of California
+	</div>
+</footer>
+
+<div id="background_decorative">&nbsp;</div>
+
+
+<!-- Load & Launch UI JavaScript -->
+<script src="/javascript/libs/jquery.slides.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	EveryPage();
+	SimpleSlider();
+	});
+</script>
+<!-- End Load & Launch -->
+
+</body>
+</html>

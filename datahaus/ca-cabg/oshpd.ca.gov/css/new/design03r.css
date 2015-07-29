@@ -1,0 +1,37 @@
+/*
+design03r
+Version 2010.11.30
+*/
+
+body {
+	background:#fff url(../../images/new/background.png) repeat-x;
+}
+
+#header {
+	background:transparent url(../../images/new/header_footer_bg.png) no-repeat top right;
+}
+#head_links {
+	color:#eee;
+}
+#head_links a {
+	color:#eee;
+	background-color: #ceaa7a;
+	font-weight:bold;
+}
+
+.textfield_container {
+	background:transparent url(../../images/new/design03r/header_search_textfield.png) no-repeat;
+}
+#radio_container {
+	color:#1f70a7;
+}
+.javascript_on #radio_container label {
+	background: url(../../images/new/design03r/header_search_radiobutton.png) no-repeat 12px 3px;
+}
+#footer_1b {
+	background:transparent url(../../images/new/BrownFooter.png) no-repeat;
+	margin-left:-8px;
+}
+#footer_2 {
+	color:#777777;
+}

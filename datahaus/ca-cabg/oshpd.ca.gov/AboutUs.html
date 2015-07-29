@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<!-- 
+State of California 2013 master template
+Version 2013.xx.xx
+
+Based on 320 and Up boilerplate extension
+-->
+
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if (gt IE 9)]><!--> <html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>About - OSHPD</title>
+<meta name="Author" content="State of California" />
+<meta name="Description" content="State of California" />
+<meta name="Keywords" content="California, government" />
+
+<!-- head content, for all pages -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True"> <!-- for Blackberry, AvantGo -->
+<meta name="MobileOptimized" content="320"> <!-- for Windows mobile -->
+<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/colorscheme_oshpd.css">
+<link rel="stylesheet" href="/css/oshpd.css">
+
+<link rel="stylesheet" media="print" href="/css/print.css">
+<!-- For progressively larger displays -->
+<!-- <link rel="stylesheet" media="only screen and (min-width: 480px)" href="/css/480.css"> -->
+<link rel="stylesheet" media="only screen and (min-width: 600px)" href="/css/600.css">
+<link rel="stylesheet" media="only screen and (min-width: 768px)" href="/css/768.css">
+<!-- <link rel="stylesheet" media="only screen and (min-width: 992px)" href="/css/992.css"> -->
+<link rel="stylesheet" media="only screen and (min-width: 1280px)" href="/css/1280.css">
+<!-- For Retina displays -->
+<!-- <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5)" href="/css/2x.css"> -->
+
+
+<!-- selectivizr.com, emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8 -->
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="/javascript/libs/selectivizr-min.js"></script>
+<![endif]-->
+
+<!-- modernizr.com, feature detection -->
+<script src="/javascript/libs/modernizr-2.0.6.min.js"></script>
+
+<!-- For iPad 3-->
+<link rel="apple-touch-icon" sizes="144x144" href="/images/template2013/apple-touch-icon-144x144.png">
+<!-- For iPhone 4 -->
+<link rel="apple-touch-icon" sizes="114x114" href="/images/template2013/apple-touch-icon-114x114.png">
+<!-- For iPad 1-->
+<link rel="apple-touch-icon" sizes="72x72" href="/images/template2013/apple-touch-icon-72x72.png">
+<!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="apple-touch-icon" href="/images/template2013/apple-touch-icon-57x57.png">
+<!-- For Nokia -->
+<link rel="shortcut icon" href="/images/template2013/apple-touch-icon-57x57.png">
+<!-- For everything else -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!--Microsoft. Activate ClearType. Use highest compatibility mode, enable Chrome Frame -->
+<!--[if IE]>
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+
+<script src="/javascript/libs/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/javascript/scripts.js"></script>
+<script src="/javascript/oshpd.js"></script>
+<script src="/javascript/gatag.js"></script>
+
+
+<!--[if lt IE 9]>
+<script src="/javascript/libs/respond.min.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body class="clearfix">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4417154-1']); // you MUST replace this with your google analytics profile code, either from your own google account, or contact OTech to have one set up for you
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', '.ca.gov']);
+  _gaq.push(['_trackPageview']);
+
+  _gaq.push(['b._setAccount', 'UA-3419582-2']); // statewide analytics - do not remove or change
+  _gaq.push(['b._setDomainName', '.ca.gov']);
+  _gaq.push(['b._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- SCRIPT TO AUTOMATE ANALYTICS EVENTS FOR DOWNLOADS -->
+
+<script type="text/javascript">
+if (typeof jQuery != 'undefined') {
+    jQuery(document).ready(function($) {
+        var filetypes = /\.(zip|exe|pdf|doc|docx|xls|xlsx|ppt|pptx|mp3)$/i;
+        var baseHref = '';
+        if (jQuery('base').attr('href') != undefined)
+            baseHref = jQuery('base').attr('href');
+        jQuery('a').each(function() {
+            var href = jQuery(this).attr('href');
+            if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
+                jQuery(this).click(function() {
+                    var extLink = href.replace(/^https?\:\/\//i, '');
+                    _gaq.push(['_trackEvent', 'External', 'Click', extLink]);
+                    if (jQuery(this).attr('target') != undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+                        setTimeout(function() { location.href = href; }, 200);
+                        return false;
+                    }
+                });
+            }
+            else if (href && href.match(/^mailto\:/i)) {
+                jQuery(this).click(function() {
+                    var mailLink = href.replace(/^mailto\:/i, '');
+                    _gaq.push(['_trackEvent', 'Email', 'Click', mailLink]);
+                });
+            }
+            else if (href && href.match(filetypes)) {
+                jQuery(this).click(function() {
+                    var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                    var filePath = href;
+                    _gaq.push(['_trackEvent', 'Download', 'Click-' + extension, filePath]);
+                    if (jQuery(this).attr('target') != undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+                        setTimeout(function() { location.href = baseHref + href; }, 200);
+                        return false;
+                    }
+                });
+            }
+        });
+    });
+}
+</script>
+
+<!-- ABOVE SCRIPT TO AUTOMATE ANALYTICS EVENTS FOR DOWNLOADS -->
+
+</script>
+
+<!-- Google Suggest -->
+<script type="text/javascript">
+	document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://" : "http://") + "www.google.com/jsapi' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	google.load('search', '1');
+	google.setOnLoadCallback(function() {
+		google.search.CustomSearchControl.attachAutoCompletion(
+			'001779225245372747843:mdsmtl_vi1a', // Step 6: Update this value with your search engine unique ID. Submit a request to the OTech Service Desk if you don't already know your unique search engine ID.
+			document.getElementById('search_local_textfield'),
+			'local_form');
+	});
+</script>
+
+<header role="banner">
+	<div id="skip_to_content"><a href="#main_content">Skip to Main Content</a></div>
+
+	<div class="phone_hdr">
+		<div class="phone_hd_left">
+			<a class="p_h_button p_h_menu" onclick="toggle_menu();"><img src="/images/template2013/clear.gif" alt="Menu" /></a>
+		</div>
+		<div class="phone_hd_right">
+			<a class="p_h_button p_h_contact" href="/General_Info/Contact_OSHPD.html"><img src="/images/template2013/clear.gif" alt="Contact Us" /></a>
+			<a class="p_h_button p_h_search" onclick="toggle_search();"><img src="/images/template2013/clear.gif" alt="Search" /></a>
+		</div>
+		<div class="logo_and_banner">
+			<div class="head_cagov_logo"><a href="http://www.ca.gov/"><img src="/images/template2013/oshpd/header_ca.gov.png" alt="CA.gov" /></a></div>
+			<div class="head_organization_banner"><a href="/"><img src="/images/template2013/oshpd/header_oshpd.png" alt="OSHPD Logo" /></a></div>
+		</div>
+	</div>
+
+	<div id="head_search">
+		<form id="local_form" action="http://www.google.com/cse"> <!-- the form action will be changed using javascript -->
+			<div class="textfield_container">
+				<label for="search_local_textfield" accesskey="s" class="hidden">Search this site: </label>
+				<input type="text" name="q" id="search_local_textfield" size="40" autocomplete="off" value="Search OSHPD" onfocus="if(this.value=='Search')this.value=''" onblur="if(this.value=='')this.value='Search'" />
+				<input type="hidden" name="cx" value="001779225245372747843:mdsmtl_vi1a" />
+				<input type="hidden" name="cof" value="" /> <!-- this value will be set using javascript -->
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="hidden" name="nojs" value="1" />
+
+			</div>
+			<div class="submit_container clearfix">
+				<input type="image" alt="Search" title="Search" name="submit" src="/images/template2013/clear.gif" />
+			</div>
+		</form>
+	</div>
+	
+	<nav id="navigation" class="mininav">
+		<ul id="nav_list">
+			<li><a href="/" class="nav_level1_link"><span id="nav_home_container"></span><img src="/images/template2013/clear.gif" alt="Home" />&nbsp;</a>
+			</li>
+			<li><a href="/About.html" class="nav_level1_link">About OSHPD</a>
+				<div class="nav_panel">
+					<ul>
+						<li><a href="/AboutUs.html">About OSHPD</a></li>
+						<li><a href="/Connect.html">Connect with OSHPD</a></li>
+						<!--<li><a href="/Divisions.html">Divisions</a></li>-->
+						<!--<li><a href="/Boards-and-Commissions.html">Boards and Commissions</a></li>-->
+						<li><a href="/General_Info/Jobs_and_exams.html">Jobs and Exams</a></li>
+						<li><a href="/LawsRegs/ProgramStatutes.html">Laws and Regulations</a></li>
+						<li><a href="/General_Info/Public_Meetings.html">Public Meetings, Notices and Agendas</a></li>
+						<li><a href="/Publications.html">Publications and Reports</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/Building-Saftety-and-Finance.html" class="nav_level1_link">Building Safety/Finance</a>
+				<div class="nav_panel">
+					<ul>
+						<li class="division"><a href="/FDD/">Facilities Development Division</a></li>
+						<li><a href="/FDD/Plan_Review/">Plan Review</a></li>
+						<li><a href="/FDD/Pre-Approval/index.html">Preapprovals</a></li>
+						<li><a href="/FDD/Plan_Review/">Construction</a></li>
+						<li><a href="/FDD/seismic_compliance/">Seismic Safety</a></li>
+						<li><a href="/FDD/">Building Standards</a></li>
+						<li><a href="/Boards/HBSB/index.html">Hospital Building Safety Board (HBSB)</a></li>
+						<li><a href="/FDD/InspectServices/index.html">Hospital Inspector Certification</a></li>
+						<li><a href="https://eserv.oshpd.ca.gov/CitizenAccess/">eServices Client Access</a></li>
+						<li class="division"><a href="/CalMort/">Cal-Mortgage</a> </li>
+						<li><a href="/CalMort/">Loan Insurance</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/Healthcare-Data.html" class="nav_level1_link">Healthcare Data</a>
+				<div class="nav_panel">
+					<ul>
+						<li class="division"><a href="/HID/">Healthcare Information Division</a></li>
+						<li><a href="/HID/DataFlow/">Find Data</a></li>
+						<li><a href="/HID/Data_Request_Center/">Request Data</a></li>
+						<li><a href="/General_Info/Submit_Data.html">Submit Data</a></li>
+						<li><a href="//chhs.data.ca.gov">CHHS Open Data Portal</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="/Healthcare-Workforce.html" class="nav_level1_link">Healthcare Workforce</a>
+				<div class="nav_panel">
+					<ul>
+						<li class="division"><a href="/HWDD/">Healthcare Workforce Development Division</a></li>
+						<li><a href="/HWDD/CalPCO.html">California Primary Care Office (PCO)</a></li>
+						<li><a href="/HWDD/SLRP.html">California State Loan Repayment Program (SLRP)</a></li>
+						<li><a href="/HWDD/HWC/">California Healthcare Workforce Clearinghouse</a></li>
+						<li><a href="/HWDD/Research_Policy_Planning_GIS.html">GIS and Data</a></li>
+						<li><a href="/HWDD/HCTP.html">Health Careers Training Program (HCTP)</a></li>
+						<li><a href="/HWDD/HWPP.html">Health Workforce Pilot Projects Program (HWPP)</a></li>
+						<li><a href="/Reform/">Healthcare Reform (HCR)</a></li>
+						<li><a href="/HWDD/Shortage_Designation_Prog.html">Shortage Designation Program (SDP)</a></li>
+						<li><a href="/HWDD/Song_Brown_Prog.html">Song-Brown Training Program</a></li>
+						<li><a href="/HWDD/WET.html">Workforce Education and Training (WET)</a></li>
+						<li class="division"><a href="/HPEF/">Health Professions Education Foundation</a> </li>
+						<li><a href="/HPEF/applications.html">Loan Repayments for Healthcare Professionals</a></li>
+						<li><a href="/HPEF/applications.html">Student Scholarships</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+<div id="main_content" class="clearfix">
+	<div class="add_maincontent_padding">
+		<h1>About OSHPD</h1>
+		
+		<p>California's Office of Statewide Health Planning and Development (OSHPD) is the leader in collecting data and disseminating information about California's healthcare infrastructure.</p>
+		
+		<p>OSHPD promotes an equitably distributed healthcare workforce, and publishes valuable information about healthcare outcomes.</p>
+		
+		<p>OSHPD also monitors the construction, renovation, and seismic safety of hospitals and skilled nursing facilities and provides loan insurance to assist the capital needs of California's not-for-profit healthcare facilities.</p>
+		<p><a href="/General_Info/Public_Meetings.html" class="button darkBlue">Boards and Commissions</a> <a href="/Connect.html" class="button darkBlue">Connect with OSHPD</a><a href="General_Info/OrgChart.pdf" class="button darkBlue">Organization Chart</a></p>
+		<div class="container_style_b">
+		<h4>OSHPD's Vision Statement</h4>
+		<p class="add_side_padding">
+		Access to safe, quality healthcare environments that meet California's diverse and dynamic needs.</p>
+		</div>
+		
+		<div class="container_style_b">
+		<h4>OSHPD's Mission Statement</h4>
+		
+		<div class="add_side_padding"><p>OSHPD advances safe, quality healthcare environments through innovative and responsive services and information that:</p>
+		<ul class="list_style_1">
+			<li>Finance emerging needs</li>
+			<li>Ensure safe facilities</li>
+			<li>Support informed decisions</li>
+			<li>Cultivate a dynamic workforce		</li>
+		</ul>
+		</div>
+		</div>
+		
+		<div class="container_style_b">
+		<h4>OSHPD's Values</h4>
+
+		<div class="accordion constrained">
+			<h5 class="manuals">Accountability - Willingness to accept responsibility for one's actions</h5>
+			<p class="bellows add_side_padding">As a government agency, OSHPD is held accountable for its actions. In fact, this "Accountability" is one of the prime factors that separate governmental from private sector organizations. OSHPD is accountable to the people of California, as well as to their representatives, including the Governor and members of the Legislature. OSHPD is also accountable to those who depend on its services, such as healthcare facilities and health professionals, to name two examples. This accountability generates certain expectations for OSHPD's actions. 
+</p>
+			<h5 class="manuals">Communication - The sharing of information</h5>
+			<p class="bellows add_side_padding">"Communication" means that it is important for OSHPD to effectively and reliably transmit information both internally and externally. It also emphasizes that at OSHPD, communication is "two-way" in nature. OSHPD is a national leader in communication as portrayed by its commitment to making healthcare information available to the public. An example of this is found in OSHPD's hospital financial and utilization reports that are considered to be confidential in many states.</p>
+			<h5 class="manuals">Community - A unified body of individuals</h5>
+			<p class="bellows add_side_padding">OSHPD embraces a culture where instead of many divisions geographically disbursed working on their own, it is one department coming together to serve its clients and the people of California. OSHPD is a community comprised of unique individuals with special roles and talents who are unified by an identity that is greater than the sum of its parts. This "Community" value is a new value for OSHPD and enhances and supports other areas of OSHPD's strategic planning effort. In the Community Map, OSHPD has formally named the OSHPD team as the "OSHPD Community." The Rallying Cry, "One OSHPD – Working Together," which provides energy for OSHPD's initial efforts toward implementation of its strategic plan, also emphasizes the importance of this new value and the need to work as one organization. 
+</p>
+			<h5 class="manuals">Innovation - A new idea, method or device</h5>
+			<p class="bellows add_side_padding">"Innovation" typifies what OSHPD does. For example, OSHPD's Cal-Mortgage Program and Health Professions Education Foundation are healthcare accessibility extenders that are unique in state government. OSHPD's Facilities Development Division is known throughout the world for its cutting edge work on health facility structural and functional safety. Although OSHPD is not the only state department in the nation that collects or analyzes health data, many consider OSHPD's Healthcare Information Division to be the best at what it does. OSHPD's Healthcare Workforce Development Division has also garnered repeated accolades for leading the nation in a proactive effort to develop the health workforce.
+</p>
+			<h5 class="manuals">Integrity - To adhere firmly to a code of moral values</h5>
+			<p class="bellows add_side_padding">"Integrity" is a very important value for a governmental organization. The dictionary includes the definition: firm adherence to a code of especially moral or artistic values, i.e. incorruptibility. At OSHPD, with regard to both internal operations and external relationships, integrity is our cornerstone. Integrity also means that OSHPD can be counted on to always perform in a consistent and fair manner.
+</p>
+			<h5 class="manuals">Professionalism - Aspiring qualities that mark a profession or agency</h5>
+			<p class="bellows add_side_padding">"Professionalism" means high standards, self-accountability, and responsibility. Other identified characteristics of professionalism include the need to maintain an ongoing educational process, dedication, and awareness of professional norms in order to achieve a consistency of performance. Put another way, OSHPD team members can be relied upon to always perform in a uniformly excellent manner by continually improving their capabilities and competencies.</p>
+			<h5 class="manuals">Respect - To consider worthy of high regard</h5>
+			<p class="bellows add_side_padding">"Respect" is a value that OSHPD team members use to guide their work on a daily basis. Respect has meaning for both internal relationships with each other and external relationships with OSHPD's constituents. Each operating unit within OSHPD has a set of clients who utilize OSHPD's services. Despite the enormous volume of interactions, OSHPD has rarely (indeed almost never) received complaints about the way OSHPD's team members treat its clients.
+</p>
+			<h5 class="manuals">Service - A contribution to the welfare of others</h5>
+			<p class="bellows add_side_padding">OSHPD is essentially a "Service" organization, providing services for its clients and the California public. These services include the efficient processing of approvals for health facility construction and the collection and dissemination of information from healthcare providers along with many other services OSHPD provides. OSHPD is recognized for its service quality and consistency. OSHPD is committed to maintaining and even improving upon this level of achievement, which is a demanding but achievable goal. 
+</p>
+			<h5 class="manuals">Teamwork - Each doing a part for the good of the whole</h5>
+			<p class="bellows add_side_padding">OSHPD works as a team of many teams. A team-based approach allows the organization to synergistically apply its various strengths and technical competencies. An illustration of this comes from the Facilities Development Division where a team comprised of structural engineers, electrical engineers, mechanical engineers, fire-life safety officers, architects, compliance officers, and others must work together at multiple points in time to review and approve new construction for California's hospitals and skilled nursing facilities. Another example is the Healthcare Information Resource Center where a group of creative and dedicated professionals work together to respond creatively to requests for information or data.
+</p>
+		</div>
+	</div>
+		
+		<h2>OSHPD Divisions:</h2>
+		<ul class="list_style_2">
+			<li><a href="http://oshpd.ca.gov/Admin/"><strong>Administrative Services</strong></a><br>
+			Provides business and contract services,  Small Business and DVBE Advocate, fiscal support, and human resource services  such as jobs and exams.</li>
+			<li><a href="http://oshpd.ca.gov/CalMort/"><strong>Cal-Mortgage</strong></a><br>
+			Provides loan insurance for non-profit  healthcare facility development.</li>
+			<li><a href="http://oshpd.ca.gov/FDD/"><strong>Facilities Development Division</strong></a><br>
+			Reviews and inspects health facility  construction projects.</li>
+			<li><a href="http://oshpd.ca.gov/HID/DataFlow/"><strong>Healthcare Information Division</strong></a><br>
+			Collects data and distributes information  on health &amp; healthcare in California.</li>
+			<li><a href="http://oshpd.ca.gov/General_Info/Healthcare_Workforce.html"><strong>Healthcare Workforce Development Division</strong></a><br>
+			Shortage Designation, Research, Data, GIS,  Funding, Loan Repayments, Internships, Pilot Projects, and Resources.</li>
+			<li><a href="http://oshpd.ca.gov/HPEF/"><strong>Health Professions Education Foundation</strong></a><br>
+				Provides scholarships and loan repayments  for healthcare professionals and students.			</li>
+		</ul>
+		<h2>OSHPD Executive Staff:</h2>
+		<div class="accordion constrained">
+			<h4 class="manuals">Director’s Office</h4>
+			<div class="bellows">
+				<img alt="OSHPD Director Bob David" src="images/director_robertpdavid.jpg" class="padding-right-1em" style="float:right">
+				<h5>Robert P. David, Director <a href="mailto:Robert.David@oshpd.ca.gov" class="button tanKhaki">Email</a></h5>
+				<div id="BobBio">
+					
+					<p><strong>Robert P. David</strong> was appointed by Governor Brown as director of the Office of Statewide Health Planning and Development (OSHPD) on April 13, 2012.</p>
+					<div class="read-more">
+						<p>Prior to his appointment to OSHPD, David was an executive for the American Hospital Association where he worked on state and federal issues impacting the industry. From 2005 to 2010, David served as the Chief Deputy Director for OSHPD, and before that, he was the Regional Vice President at the Hospital Council of Northern and Central California for six years. Other state government experience includes serving as Assistant Secretary at the Health and Welfare Agency and as Senior Negotiator at the California Medical Assistance Commission.</p>
+						<p>From 1999 to 2003 David served as a member of the State Emergency Medical Services Commission and is a former member of the San Joaquin County Health Commission. He was selected as a Sierra Health Foundation Health Leadership Fellow in 2002, and completed the Program for Senior Executives in State and Local Government at Harvard University in 2006.</p>
+					</div>
+				</div>
+				<h5 class="dash-line-top" style="clear:both;">Fran Mueller, Chief Deputy Director <a href="mailto:Fran.Mueller@oshpd.ca.gov" class="button tanKhaki">Email</a></h5>
+				<div id="FranBio">
+					<p><strong>Fran Mueller</strong> was appointed by Governor Brown as chief deputy director of the Office of Statewide Health Planning and Development (OSHPD) on February 6, 2015.</p>
+					<p class="read-more">Prior to her appointment to OSHPD, Mueller was the deputy director of administration at the California Department of Social Services (CDSS) since 2010. From 2006-2010, Mueller served as the chief of the Financial Management and Contracts Branch at CDSS. She was a finance budget analyst at the California Department of Finance from 2002 to 2006 and director of research and programming at PTI Media Networks from 2001 to 2002. From 1998 to 2001, Mueller was director of research and programming at KTXL-TV in Sacramento and also served as the station’s director of research from 1987 to 1998. Mueller is from New York, where she was the research and marketing group manager at MMT Sales Inc. from 1984 to 1987. She holds a degree in communications from Adelphi University.</p> 
+				</div>
+				<h5 class="dash-line-top">Eric Reslock, Assistant Director, Legislative and Public Affairs <a href="mailto:Eric.Reslock@oshpd.ca.gov" class="button tanKhaki">Email</a></h5>
+				<div id="EricBio">
+					<p><strong>Eric Reslock</strong> was appointed in December, 2014.  He was a 1996-97 Jesse Marvin Unruh Assembly Fellow. He served six years as legislative and communications director for Assemblyman Bill Leonard,  <span class="read-more">and eight additional years in the same capacity upon Leonard’s election to the State Board of Equalization. Reslock served for three years as chief of external affairs for the California Prison Industry Authority. He is a graduate of Thomas Aquinas College’s classical studies curriculum and is a native of Olympia, Washington.</span></p>
+				</div>
+				<h5 class="dash-line-top">Bonita Estrada, Equal Employment Opportunity Officer <a href="mailto:Bonita.Estrada@oshpd.ca.gov" class="button tanKhaki">Email</a></h5>
+				<div class="bellows" id="BonitaBio">
+					<p><strong>Bonita Estrada</strong> has served as Equal Employment Opportunity (EEO) Officer of the Office of Statewide Health Planning and Development (OSHPD) since 2007. <span class="read-more">Prior to joining OSHPD, she acted as a Training Officer where she trained over 1,000 people in various aspects of EEO.  She was elected to the California Civil Rights Officers’ Council Steering Committee in 2010 and is currently serving her third term. Bonita is very committed to EEO and making every environment better than how she found it.</span></p>
+				</div>
+			</div>
+			<h4 class="manuals">Legal Office</h4>
+			<div class="bellows">
+				<h5>Elizabeth Wied, Chief Counsel <a href="mailto:Elizabeth.Wied@oshpd.ca.gov" class="button tanKhaki">Email</a><a href="#LizBio" class="button tanKhaki accordion-link">Bio</a></h5>
+				<div class="bellows" id="LizBio">
+				<p><strong>Elizabeth Wied</strong> was appointed chief counsel in 2006.  She previously served at the California Department of Veterans’ Affairs and the Department of Child Support Services and worked previously in private practice.  Wied is a graduate of Mills College, National University, and the University of San Diego School Of Law.  </p>
+				</div>
+			</div>
+			<h4 class="manuals">OSHPD Divisions</h4>
+			<div class="bellows">
+				<h5>James  Cortes, Acting Deputy  Director, Administrative Services Division <!--<a href="mailto:Karen.Miskanis@oshpd.ca.gov" class="button tanKhaki">Email</a>--><a href="mailto:James.Cortes@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#JamesBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="JamesBio">
+<p><strong>James Cortes</strong> was assigned as acting deputy director of the Administrative Services Division (ASD) in January, 2015. Prior to this role, he served as the manager over ASD’s Budgets, Business Services, and Committee for Protection of Human Subjects Section.  James has over 20 years of state service experience working in various fiscal management roles including budgets, accounting, federal reporting, and county fiscal analysis.  James graduated with a Bachelor of Arts degree in Business Administration and a Master of Public Administration from the University of Southern California. </p>
+</div>
+
+<h5 class="dash-line-top">J. Scott Christman, Chief Information Officer, Deputy Director for Information Technology Services <a href="mailto:Scott.Christman@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#ScottBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="ScottBio">
+<p><strong>J. Scott Christman</strong> returned to the Office of Statewide Health Planning and Development (OSHPD) in June, 2014 as chief information officer and deputy director for Information Technology Services. Prior to his return to OSHPD, Christman served in leadership roles for both private and public sector organizations including a software company, healthcare systems, the California Department of Public Health, and the California Health and Human Services Agency, where much or his work focused on stimulus-funded health IT initiatives impacting the industry. Christman had previously served at OSHPD from 2001 to 2007 as an IT manager and project coordinator primarily supporting enterprise geographic information systems (GIS) and data management initiatives. He is a Sacramento native with an undergraduate degree from Sacramento State University and a graduate degree from the University of Southern California.</p>
+</div>
+<h5 class="dash-line-top">
+Stephen Pollitt,  Information Security Officer <a href="mailto:Stephen.Pollitt@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#StephenBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="StephenBio">
+<p><strong>Stephen Pollitt</strong> returned to the Office of Statewide Health Planning and Development (OSHPD) on October 31, 2014, where he started his state services career to serve as information security officer. Prior to his return to OSHPD, Pollitt worked at the Department of State Hospitals Information Technology division as server administrator, project manager, lead information security analyst, and backup information security officer. Prior to that Pollitt worked in the Department of Social Services Information Security unit as the senior analyst developing ISO 27000 compliant information security policies.  He has lived in Sacramento all his life.  He has a degree in economics from Sacramento State University.</p>
+</div>
+<h5 class="dash-line-top">
+Carl A. McLaney, Deputy Director, Cal-Mortgage Division <a href="mailto:Carl.McLaney@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#CarlBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="CarlBio"><p>
+<strong>Carl A. McLaney</strong> was appointed deputy director of the Cal-Mortgage Loan Insurance Division in March, 2008.  Prior to his appointment, Carl served as a manager in the Cal-Mortgage division.  From 1992 to 1995, Carl served as a finance project manager and as special assistant to the executive director for the Century Freeway Housing Program in Los Angeles.  Carl is a California native and completed his undergraduate degree at San Francisco State University and post graduate degree at University of Southern California.  </p></div>
+<h5 class="dash-line-top">
+Paul Coleman, Deputy Director, Facilities Development Division <a href="mailto:Paul.Coleman@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#PaulBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="PaulBio"><p>
+<strong>Paul Coleman</strong> was appointed deputy director of the Facilities Development Division (FDD) in February, 2009.  Previously, he served as the deputy division chief, Southern California, for more than 13 years.  Paul was an area compliance officer for more than five years and was promoted to regional compliance officer before becoming the Los Angeles office manager.  Before joining FDD, he was the vice president of an architectural and urban planning firm and had also been the staff architect for a Southern California hospital.  Paul is a licensed architect and a licensed general contractor. </p></div>
+<h5 class="dash-line-top">
+Chris Tokas, Deputy Division Chief, Sacramento, Facilities Development Division <a href="mailto:Chris.Tokas@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#ChrisBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="ChrisBio"><p>
+<strong>Chris Tokas</strong> SE, F. SEOC, is a deputy division chief of Northern California operations. Tokas has over 30 years of experience in structural engineering and design, with special emphasis in the areas of seismic evaluation, analysis, and retrofit. He has designed and managed seismic upgrade projects for a wide variety of public, private, and institutional clients and has been involved in all phases of seismic risk reduction programs, including development of criteria, evaluation of existing structural capacity, schematic design, and preparation of construction documents. 
+</p></div>
+<h5 class="dash-line-top">
+Gordon Oakley, Deputy Division Chief, Los Angeles, Facilities Development Division  <a href="mailto:Gordon.Oakley@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#GordonBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="GordonBio">
+<p><strong>Gordon Oakley</strong> was appointed deputy division chief of the Facilities Development Department(FDD), Los Angeles in June, 2011. Prior, Gordon was a regional compliance officer at FDD for the Coastal Region. Before that Gordon held the deputy division chief position for FDD in Sacramento. Gordon has been with OSHPD FDD since April of 1994, and left for an assistant fire marshal position at UCLA in 1998 and returned to OSHPD FDD later that year. Gordon spent 20 years at a municipal fire department and was the deputy fire chief for six years, prior to coming to state service in September, 1993.</p>
+</div>
+<h5 class="dash-line-top">Ron Spingarn, Deputy Director, Healthcare Information Division <a href="mailto:Ron.Spingarn@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#RonBio" class="button tanKhaki accordion-link">Bio</a></h5>
+<div class="bellows" id="RonBio">
+<p><strong>Ronald Spingarn</strong> was appointed Deputy Director in October, 2008. His public policy and communications experience over nearly 30 years includes serving as policy, external and governmental affairs deputy director at Managed Risk Medical Insurance Board, legislative aide for California Senator Jackie Speier, acting legislative coordinator at Department of Managed Health Care and working for behavior change and AIDS prevention programs at the United Nations (New York), University of California (Los Angeles), AIDS Action Committee (Boston) and local public health departments (Ventura, CA, and Phoenix, AZ).  He earned a public health informatics certificate from Johns Hopkins University in 2013, a Master’s degree in journalism from Columbia University in 1993 and a Bachelor’s degree in communication from Boston University in 1988.</p>
+</div>
+
+<h5 class="dash-line-top">
+Linda Onstad-Adkins, <a href="mailto:Linda.Onstad-Adkins@oshpd.ca.gov" class="button tanKhaki">Email</a> <a href="#LindaBio" class="button tanKhaki accordion-link">Bio</a><br />
+Acting Deputy Director, Healthcare Workforce Development Division<br />
+Acting Executive Director, Health Professions Education Foundation<br /> </h5>
+<div class="bellows" id="LindaBio"><p>
+<strong>Linda Onstad-Adkins</strong> was assigned as acting executive director of the Health Professions Education Foundation (HPEF) in February, 2015.  In July, 2015 Onstad-Adkins was also assigned as acting deputy director of the Healthcare Workforce Development Division (HWDD). Prior, she served as the chief of research, policy and planning with HWDD overseeing the California Workforce Data Clearinghouse, health care reform, and the Workforce, Education and Training (WET) programs. She has over 25 years of experience working in leadership roles in the private and non-profit sector including 10 years serving as director of underwriting for Capital Public Radio.</p></div>
+
+		</div>
+	</div>
+
+	<div class="cleaner"></div>
+	<div id="modified-date">Page last updated: July 6, 2015</div>
+</div>
+
+
+<footer id="footer_2" class="clearfix">
+	<div>
+		<a href="#skip_to_content">Back to Top</a><a href="/General_Info/SiteMap.html">Site Map</a><a href="/General_Info/Conditions_of_Use.html">Conditions of Use</a> <a href="/General_Info/Privacy.html">Privacy Policy</a> <a href="/General_Info/Accessibility_Policy.html">Accessibility</a> <a href="/General_Info/Contact_OSHPD.html">Contact OSHPD</a><a href="javascript:ContactWebmaster();">Contact Webmaster</a>
+	</div>
+
+	<div>
+		Copyright &copy; 2014 State of California
+	</div>
+</footer>
+
+<div id="background_decorative">&nbsp;</div>
+
+
+<!-- Load & Launch UI JavaScript -->
+<script src="/javascript/libs/jquery.slides.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	EveryPage();
+	UIaccordion();
+	UIreadmore();
+	});
+</script>
+<!-- End Load & Launch -->
+
+</body>
+</html>

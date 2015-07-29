@@ -1,0 +1,67 @@
+/*
+Navigation - Mega Drop-Down
+Version 2010.12.09
+*/
+
+/* Nav panel */
+
+.nav_panel {
+	display:none;
+	position:absolute;
+	width:876px; /* 936 - 10 - 50 */
+	height:230px;
+	left:0px;
+	background:transparent url(/images/new/common/nav_panel_background.png) no-repeat bottom center;
+	padding:30px 10px 0 50px;
+	overflow:visible;
+}
+.add_ribbon .nav_panel {
+	height:315px; /* 330 - 30 */ /* (Autra Moore) changed from 300px to compensate for heightened ribbon */
+	background:#e5e5e5 url(../../images/new/common/nav_shadow.png) repeat-x;
+}
+
+.nav_panel ul {
+	width:275px; /* (Autra Moore) Changed width from 290px */
+	float:left;
+	background-color:#e5e5e5; /* Needed when images are turned off */
+}
+#navigation .nav_panel li {
+	float:none;
+	background:transparent url(../../images/new/content/bullet_blue_disc.png) no-repeat 0 7px;
+	padding:5px 0px 20px 18px;
+	clear:both;
+}
+
+.javascript_off #navigation li:hover .nav_panel {
+	display:block;
+	z-index:2;
+}
+
+.nav_p_heading {
+	color:#003366;
+	font-size:14px;
+	font-weight:bold;
+}
+.nav_p_description {
+	font-size:11px;
+	padding-top:4px;
+}
+.sublinks li{
+	background: none !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	padding-top: 7px !important;
+	display:block;
+	background-image:none !important;
+}
+.sublinks {
+	display:block;
+}
+.sublinks a {
+	font-weight:bold;
+}
+.subHeader {
+	height:auto;
+	min-width:50px;
+	display:block;
+}

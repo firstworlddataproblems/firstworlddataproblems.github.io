@@ -1,0 +1,832 @@
+/*
+State of California master template
+Version 2010.12.09
+*/
+
+/* *************** CSS Reset *************** */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+
+/* *************** Outer structure *************** */
+
+html {
+	height:100%;
+	margin-bottom:1px;
+}
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.78em;
+	background:#fff url(/images/new/background.png) no-repeat;
+	line-height: 1.2;
+}
+
+
+/* *************** Header *************** */
+
+#header {
+	width:968px;
+	height:154px;
+	margin:0 auto;
+	position:relative;
+	background:transparent url(/images/new/design01/header_bg.png) no-repeat top right;
+	z-index:20;
+}
+
+#skip_to_content a, #skip_to_content a:hover, #skip_to_content a:visited {
+	position:absolute;
+	left:0px;
+	top:-500px;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+#skip_to_content a:active, #skip_to_content a:focus {
+	position:static;
+	width:auto;
+	height:auto;
+	color:#00f;
+	background:#fff;
+	padding:1px 2px;
+} 
+
+#header .head_cagov_logo {
+	position:absolute;
+	top:55px;
+	left:50px;
+	z-index:10;
+}
+#header .head_organization_banner {
+	position:absolute;
+	top:60px; /* Adjusts the position of your organization banner */
+	left:165px; /* Adjusts the position of your organization banner */
+	z-index:20;
+}
+#header .head_cphs_banner {
+	position:absolute;
+	top:71px; /* Adjusts the position of your organization banner */
+	left:165px; /* Adjusts the position of your organization banner */
+	z-index:20;
+}
+
+#head_links {
+	position:absolute;
+	top:46px;
+	left:566px;
+	font-size:.9em;
+	color:#c2e5f4;
+}
+#head_links a {
+	color:#c2e5f4;
+	background-color:#012b41;
+	margin:0 8px;
+}
+#head_links a:hover {
+	color:#fff;
+}
+
+
+/* Search */
+
+#head_search {
+	position:absolute !important;
+	left:730px !important;
+	top:71px !important;
+	z-index:10 !important;
+}
+
+.textfield_container {
+	width:183px;
+	height:20px;
+	background:transparent url(/images/new/design01/header_search_textfield.png) no-repeat;
+	float:left;
+}
+#search_ca_textfield, #search_local_textfield {
+	border:0;
+	background-color:transparent;
+	padding:3px 0 0 8px;
+	width:175px; /* 183 - 8 */
+	color:#505050;
+	font-size:0.92em;
+}
+.submit_container {
+	position:absolute;
+	top:0px;
+	left:183px;
+}
+.javascript_off #radio_container {
+	display:none;
+}
+#radio_container {
+	position:absolute;
+	top:20px;
+	left:40px;
+	color:#fff;
+	font-size:.9em;
+	width:172px; /* Fix FF3 issue where increasing font size causes radio buttons to wrap to two lines */
+}
+#header .radiobutton {
+	position:relative;
+	top:2px;
+}
+.javascript_on #header .radiobutton {
+	position:absolute;
+	left:-2000px;
+}
+.javascript_on #radio_container label {
+	padding:0 0 0 24px;
+	background: url(/images/new/design01/header_search_radiobutton.png) no-repeat 12px 3px;
+}
+
+.gsc-completion-container {
+	z-index:50; /* fix issue where Google autocomplete dropdown appears behind header images */
+}
+
+
+/* Navigation */
+
+#navigation {
+	position:absolute;
+	top:95px;
+	left:16px;
+	padding-left:143px; /* adjusts the horizontal position of the top-level nav */
+}
+#navigation ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#navigation li {
+	float: left;
+	background: transparent url(/images/new/common/nav_divider.png) no-repeat bottom right;
+	padding:0 0 0 0px;
+}
+#navigation li.last_nav_item {
+	background-image:none;
+}
+
+#navigation a.nav_level1_link {
+	text-decoration:none;
+	display: block;
+	padding:0 13px 0 15px; /* adjust the width of the tabs by adjusting the left & right padding */
+	margin-right:2px; /* add 1px gap on right side of tab */
+	height:23px; /* 47 - 24 */
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-size: 1.16em;
+	text-shadow: #000 1px 1px 3px; /* This is valid in CSS 2 and 3 but not 2.1 */
+	padding-top:24px;
+	white-space:nowrap; /* fix IE8 comp mode issue where nav text wraps */
+}
+
+#navigation li.last_nav_item a.nav_level1_link {
+	margin-right:0px;
+}
+
+#nav_list :first-child a.nav_level1_link {
+	padding-left:45px; /* Add padding so the entire background highlight can be seen */
+}
+
+.highlighted_nav_item a.nav_level1_link, .body_home #nav_list :first-child .nav_level1_link {
+	background: transparent url(/images/new/common/nav_highlight.png) no-repeat bottom right; /* current page item, home, spec 0-2-1, 1-3-0 */
+}
+#navigation #nav_list.unhighlight_nav_item a.nav_level1_link {
+	background-image:none; /* unhighlight current page item, spec 2-2-1 */
+}
+#header #navigation #nav_list li:hover a.nav_level1_link {
+	background: transparent url(/images/new/common/nav_highlight.png) no-repeat bottom right; /* hovered item, spec 3-2-2 */
+}
+
+/* Ribbon */
+
+.add_ribbon #img_ribbon {
+	width:968px;
+	height:115px;
+	background:transparent url(/images/new/common/ribbon-red.png) no-repeat;
+	position:absolute;
+	top:379px;
+	z-index:20;
+}
+.add_ribbon #main_content {
+	padding:38px 0 0 0; /* reserve space for ribbon */
+}
+
+/* *************** page_container *************** */
+
+#page_container {
+	background:transparent url(/images/new/common/page_content_shadow.png) repeat-y;
+	width:968px;
+	margin:-11px auto 0 auto;
+}
+
+#banner, #main_content {
+	width:936px;
+	margin:0 auto;
+	color:#505050;
+}
+
+/* *************** Banner *************** */
+
+#banner {
+	height:300px;
+}
+
+/* *************** Main Content *************** */
+
+#main_content {
+	position:relative;
+	padding:10px;
+}
+
+.add_padding {
+	padding:16px;
+}
+
+.content_left_column {
+	width:490px;
+	float:left;
+}
+.content_right_column {
+	width:350px;
+	float:left;
+	padding:0 0px 0 12px;
+}
+
+.breadcrumbs {
+	padding: 5px 5px 5px 10px;
+}
+.breadcrumbs img {
+	padding: 0 4px;
+}
+
+
+/* *************** Footer *************** */
+
+#footer_2 {
+	width:968px;
+	margin:0 auto;
+	margin-top:10px;
+	text-align:center;
+	padding:0px 0 20px 0;
+	color:#777777;
+	font-size:0.92em;
+	font-weight:bold;
+}
+#footer_2 a {
+	color:#777777;
+	padding:0 4px;
+}
+
+/* ================================================================================= */
+
+/* *************** Content *************** */
+
+ol, ul {
+	padding-left:40px;
+}
+
+.half_width_column {
+	width:120px;
+	float:left;
+	margin-bottom:20px;
+}
+
+p {
+	margin:.8em 0;
+}
+
+h1 {
+	font-family:Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size:2em;
+	font-weight:normal;
+	background:url(/images/content/bullet_arrow_right_green.png) no-repeat;
+	margin: 0.6em 0;
+	padding: 0 0 0 38px;
+}
+
+h2 {
+	/* font-family: "Arial Narrow", Arial, Helvetica, sans-serif; */
+	font-family:Trebuchet MS, Arial, Helvetica, sans-serif;
+  	font-size: 1.4em;
+  	font-weight: bold;
+	margin: 0.6em 0;
+}
+h2 img {
+	vertical-align:middle;
+	padding-right:6px;
+}
+h3 {
+	font-size:1.1em;
+	font-weight:bold;
+	margin:1em 0;
+	border:1px solid #d6d7db;
+	padding:2px;
+	background-color:#e7eaef;
+	text-transform:uppercase;
+}
+h4 {
+	font-size:1.1em;
+	font-weight:normal;
+	margin:0 0 .4em 0;
+}
+
+a {
+	text-decoration:none;
+	color:#1f70a7;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+.hidden { /* Hide from regular displays.  Screen readers can still read it. */
+	display:block;
+	position: absolute;
+	left: -9999px;
+	top: 0;
+}
+
+.cleaner {
+	clear:both;
+	height:2px;
+	font-size:1px;
+	border:none;
+	margin:0;
+	padding:0;
+	width:auto;
+	float:none;
+}
+
+.list_style_1 {
+	list-style-type:none;
+	padding-left:10px;
+}
+.list_style_1 li {
+	background:transparent url(/images/new/content/bullet_blue_disc.png) no-repeat 0px 2px;
+	padding:0 0 14px 18px;
+}
+.list_style_1 a {
+	font-size:1.1em;
+	font-weight:bold;
+}
+.list_style_1 div {
+	margin:.4em 0 0 0;
+}
+
+.list_style_2, .list_style_2 ul {
+	list-style-type:none;
+	padding-left:10px;
+}
+.list_style_2 li {
+	background:transparent url(/images/new/content/bullet_blue_disc.png) no-repeat 0px 2px;
+	padding:0 0 16px 18px;
+}
+.list_style_2 li li {
+	margin:6px 0 0 0;
+	padding:0 0 0 18px;
+}
+
+.list_style_3, .list_style_3 ul {
+	list-style-type:none;
+	padding-left:10px;
+}
+.list_style_3 li {
+	background:transparent url(/images/new/content/bullet_blue_disc.png) no-repeat 0px 2px;
+	padding:0 0 4px 18px;
+}
+.list_style_3 li li {
+	margin:6px 0 0 0;
+	padding:0 0 0 18px;
+}
+
+/* list with white > on blue disc bullets */
+#main_content .list_style_4 {
+	list-style-type:none;
+	padding-left:10px;
+	float:left;
+}
+#main_content .list_style_4 li {
+	float:none;
+	background:transparent url(/images/new/content/bullet_blue_disc.png) no-repeat 0px 1px;
+	padding:0 0 5px 18px;
+}
+.indent {
+	padding-left:42px;
+}
+
+
+/* *************** Custom styles *************** */
+/* Fix sup and sub tags */
+sub {
+	vertical-align:sub;
+}
+sup {
+	vertical-align:super;
+}
+.videoControls {
+	position: relative;
+	top: -45px;
+	left: 900px;
+	z-index: 99;
+}
+
+.page_revision {
+ text-align:center;
+ padding-bottom:1em;
+ font-style:italic;
+}
+.content_left_column p a {
+	font-weight:bold;
+}
+/*from previous template's css styles*/
+.indent_left_15 { /* Added this and the next 3 classes to allow various degrees and types of indenting */
+ margin-left: 15px;
+ text-align: left;
+}
+
+.indent_left_right_15 { 
+ margin-left: 15px;
+ margin-right: 15px;
+ text-align: left;
+}
+
+.indent_left_37 {
+ margin-left: 37px;
+ text-align: left;
+}
+
+.indent_left_right_37 {
+ margin-left: 37px;
+ margin-right: 37px;
+ text-align: left;
+}
+/* *************** Rotating Banners *************** */
+#rotating_banner_container {
+	position:relative;
+	width:179px;
+	background-color:#fff;
+	float:left;
+	height:auto;
+	margin-left: 67px;
+	padding-bottom:10px;
+	/*border:10px solid black;*//*optional*/
+}
+
+
+#rotating_banner_container.javascript_enabled { /* when js is enabled */
+	height:50px;
+}
+
+#rotating_banner_container #rotating_banner_images img {
+	border:0;
+}
+
+#rotating_banner_container #rotating_banner_images a:hover {
+	background-color:transparent;
+}
+
+#rotating_banner_container.javascript_enabled #rotating_banner_images a { /* when js is enabled */
+	position:absolute;
+}
+/*---------------------------------------------*/
+/*  tabpanel_module                            */
+/*  Tab Panel section with hover effects       */
+/*---------------------------------------------*/
+
+.block_with_image_and_tabpanel {
+ padding-bottom:8px;
+ min-width:559px;
+ /*height:14em; */ /* Needed if there is no image to hold the container open. Adjust this depending on the height of your tabpanel */
+}
+
+.block_with_image_and_tabpanel .image_container {
+ border: 1px solid #bcc5d0;
+ background:#fff;
+ padding:7px 7px 0px 7px;
+ margin:5px 0px 0px 5px;
+ text-align:center;
+ float:left;
+ display:inline;
+ width:137px; /* Width for portrait photos, 123 + 14 = 137, needed for IE 5.0 */
+ overflow: hidden;
+ voice-family:"\"}\"";
+ voice-family:inherit;
+ width:auto; /* Width for portrait photos, for non-broken browsers */
+}
+
+.block_with_image_and_tabpanel .image_container img {
+ width: 123px;
+ height: 193px; /* Width and height are needed if images are turned off in the browser */
+ display:block;
+}
+
+#tabpanel_container, #tabpanel_container_3, #tabpanel_container_4, #tabpanel_container_5, #tabpanel_container_6, #tabpanel_container_7, #tabpanel_container_8, #tabpanel_container_9, #tabpanel_container_10 {
+ padding:8px 8px 0 0;
+ margin:0 0 0 10px;
+}
+
+#tabpanel_container {
+ height:210px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_3 {
+ height:124px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_4 {
+ height:145px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_5 {
+ height:167px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_6 {
+ height:189px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_7 {
+ height:210px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_8 {
+ height:228px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_9 {
+ height:250px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+#tabpanel_container_10 {
+ height:272px; /* Height needs to be set if no image is present and is site wide currently */
+}
+
+.contains_landscape_photo, .contains_portrait_photo {
+ height:auto;
+}
+
+.contains_landscape_photo #tabpanel_container {
+ margin:0 0 0 12px; /* Width for landscape photos up to 167px wide, 167 + 13 padding = 180 */
+}
+
+.contains_portrait_photo #tabpanel_container {
+ margin:0 0 0 12px; /* Width for portrait photos up to 123px wide, 123 + 27 padding = 150 */
+}
+
+#tabpanel {
+ margin:0;
+ width:99%;
+}
+
+#tab_list, #tab_list_2, #tab_list_cal {
+ padding: 0;
+ position:relative; /* Makes this the containing block */
+ white-space: nowrap;
+ display:block;
+ z-index:10;
+ width:100%;
+}
+
+#tab_list ul, #tab_list_2 ul, #tab_list_cal ul {
+ position: absolute; /* Needed for IE 5.x */
+ margin: 0;
+ z-index:1;
+ padding: 0;
+ width:100%;
+}
+#tab_list ul#tab_ul, #tab_list_2 ul#tab_ul, #tab_list_cal ul#tab_ul {
+ height: 30px;
+}
+
+li#tabpanel_1, li#tabpanel_2, li#tabpanel_3, li#tabpanel_4, li#tabpanel_5, li#tabpanel_6, li#tabpanel_1_cal, li#tabpanel_2_cal, li#tabpanel_3_cal, li#tabpanel_4_cal, li#tabpanel_5_cal {
+ background: #7E98BA url(/images/ca_department/tabpanel_tabs.gif) 0px -60px  no-repeat; /* normal tabs */
+ margin: 0;
+ float: left;
+ display: inline;
+ padding: 0;
+ cursor:pointer;
+}
+
+li#tabpanel_1_cal, li#tabpanel_2_cal, li#tabpanel_3_cal, li#tabpanel_4_cal, li#tabpanel_5_cal {
+ text-align:center;
+ cursor:pointer;
+}
+
+#tab_list a.tab_link, #tab_list_2 a.tab_link, #tab_list_cal a.tab_link {
+ z-index:10;
+ position:relative;
+ color: #fff;
+ font-weight: bold;
+ text-decoration: none;
+ padding:8px 12px 0px 12px; /* Adjust left and right padding to adjust width of the tabs */
+ display: block; /* Needed for Opera */
+ float:left; /* Needed for IE, breaks Opera */
+ background: transparent url(/images/ca_department/tabpanel_tabs.gif) 100% -60px  no-repeat;
+
+ height:30px; /* Needed for IE 5.x broken box */
+
+ voice-family:"\"}\"";
+ voice-family:inherit;
+ height:22px; /* 30 - 8, for non-broken browsers */
+}
+
+html[xmlns] #tab_list a.tab_link, html[xmlns] #tab_list_2 a.tab_link, html[xmlns] #tab_list_cal a.tab_link {
+ float:none; /* Needed for Opera, breaks IE 6. Hack hides this from IE 6 */
+}
+
+#tab_list a:hover, #tab_list_2 a:hover, #tab_list_cal a:hover {
+ text-decoration: underline;
+}
+
+#tabpanel #tab_list li, #tabpanel #tab_list_2 li, #tab_list_cal li {
+ list-style-type: none;
+ list-style-image: none;
+}
+
+#tab_list ul ul, #tab_list_2 ul ul, #tab_list_cal ul ul {
+ position:absolute;
+ top:29px;
+ left:0px;
+ display:none;
+ z-index:-10;
+ border:1px solid #7E98BA; /* dark blue */
+ padding:12px 0 16px 0;
+ background:#E8EFF6; /* Light blue */
+}
+
+#tabpanel #tab_list ul ul li {
+ float: left;
+ width:96%; /* Controls width of list items decorative underline. If below 50% it creates 2 columns */
+ background-position: 6px 2px;
+}
+
+#tabpanel #tab_list_2 ul ul li {
+ float: left;
+ width:48%; /* Controls width of list items decorative underline. If below 50% it creates 2 columns */
+ background-position: 6px 2px;
+ overflow:hidden;
+}
+
+#tabpanel #tab_list_cal ul ul li {
+ float: left;
+ width:16em; /* Controls width of list items decorative underline. If below 50% it creates 2 columns */
+ overflow:hidden;
+ padding-left:1.3em;
+}
+
+#tabpanel #tab_list ul ul li a, #tabpanel #tab_list_2 ul ul li a, #tabpanel #tab_list_cal ul ul li a {
+ float:none;
+ height:auto;
+ margin:0 0 0 24px;
+}
+
+#tab_list ul li.tabpanel_default ul, #tab_list ul li:active ul, #tab_list_2 ul li.tabpanel_default ul, #tab_list_2 ul li:active ul, #tab_list_cal ul li.tabpanel_default ul, #tab_list_cal ul li:active ul {
+ display:block;
+}
+
+#tab_list li.tabpanel_default a.tab_link, #tab_list li:active a.tab_link, #tab_list_2 li.tabpanel_default a.tab_link, #tab_list_2 li:active a.tab_link, #tab_list_cal li.tabpanel_default a.tab_link, #tab_list_cal li:active a.tab_link {
+ background: transparent url(/images/ca_department/tabpanel_tabs.gif) top right no-repeat;
+ color:#000;
+ text-decoration: none;
+}
+
+#tab_list li.tabpanel_default, #tab_list_2 li.tabpanel_default, #tab_list_cal li.tabpanel_default, #tabpanel_1:active, #tabpanel_2:active, #tabpanel_3:active, #tabpanel_4:active, #tabpanel_5:active {
+ background: #E8EFF6 url(/images/ca_department/tabpanel_tabs.gif) top left no-repeat; /* Hovered tab background */
+}
+
+#tabpanel #tab_list li a.tab_link:active, #tabpanel #tab_list_2 li a.tab_link:active, #tabpanel #tab_list_cal li a.tab_link:active { /* Needed for IE */
+ text-decoration: none;
+}
+
+#tabpanel #tab_list a:active, #tabpanel #tab_list li.tabpanel_default ul a:active, #tabpanel #tab_list_2 a:active, #tabpanel #tab_list_2 li.tabpanel_default ul a:active, #tabpanel #tab_list_cal a:active, #tabpanel #tab_list_cal li.tabpanel_default ul a:active {
+ text-decoration:underline;
+}
+
+#tabpanel ul ul a:active {
+ background:transparent;
+}
+
+#tab_list .bottom_right, #tab_list_2 .bottom_right, #tab_list_cal .bottom_right { /* For the rounded corner */
+ position:absolute;
+ width:6px;
+ height:6px;
+ font-size:1px;
+ bottom:-2px;
+ right:-2px;
+ background: url(/images/ca_department/tabpanel_corners.gif) top left no-repeat;
+}
+#tab_list .bottom_left, #tab_list_2 .bottom_left, #tab_list_cal .bottom_left { /* For the rounded corner */
+ position:absolute;
+ width:6px;
+ height:6px;
+ font-size:1px;
+ bottom:-2px;
+ left:-2px;
+ background: url(/images/ca_department/tabpanel_corners.gif) top right no-repeat;
+}
+
+/* End of tabpanel_module */
+
+/*--------------------------------------------------*/
+/*  block_with_rounded_corners                      */
+/*  Adds rounded corners and blue bar for heading   */
+/*--------------------------------------------------*/
+
+.block_with_rounded_corners {
+ width:91.5%;
+ background:#dbe6f0;
+ border-style:solid;
+ border-color:#5d7493;
+ border-width:0 1px 1px 1px;
+ position:relative; /* Make this the containing block of the corner spans */
+ margin-bottom:16px;
+}
+
+.block_with_rounded_corners_2 { /* Added class to allow 2 containers side by side on one page */
+ width:45%; /* This value can be no greater than 45% to not break IE 6 or 46% to not break Firefox 2.x */
+ background:#ECECE7;
+ border-style:solid;
+ border-color:#5d7493;
+ border-width:0 1px 1px 1px;
+ position:relative; /* Make this the containing block of the corner spans */
+ float:left;
+ margin-right:16px;
+ margin-bottom:16px;
+}
+
+.block_with_rounded_corners h3, .block_with_rounded_corners_2 h3 {
+ background:#0d559a;
+ color:#fff;
+ padding:5px 10px 5px 10px;
+ margin:0px;
+ border:none;
+}
+
+.block_with_rounded_corners h4, .block_with_rounded_corners_2 h4 {
+ background:#5d7493;
+ color:#fff;
+ padding:5px 10px 5px 10px;
+ margin:0px;
+}
+
+.block_with_rounded_corners .bottom_right, .block_with_rounded_corners_2 .bottom_right {
+ position:absolute;
+ width:6px;
+ height:6px;
+ font-size:1px;
+ bottom:-2px;
+ right:-2px;
+ background: url(/images/new/block_with_image_corners.gif) top left no-repeat;
+}
+
+.block_with_rounded_corners .bottom_left, .block_with_rounded_corners_2 .bottom_left {
+ position:absolute;
+ width:6px;
+ height:6px;
+ font-size:1px;
+ bottom:-2px;
+ left:-2px;
+ background: url(/images/new/block_with_image_corners.gif) top right no-repeat;
+}
+
+.block_with_rounded_corners .top_right, .block_with_rounded_corners_2 .top_right {
+ position:absolute;
+ width:6px;
+ height:6px;
+ font-size:1px;
+ top:-1px;
+ right:-2px;
+ background: url(/images/new/block_with_image_corners.gif) bottom left no-repeat;
+}
+
+.block_with_rounded_corners .top_left, .block_with_rounded_corners_2 .top_left {
+ position:absolute;
+ width:6px;
+ height:6px;
+ font-size:1px;
+ top:-1px;
+ left:-2px;
+ background: url(/images/new/block_with_image_corners.gif) bottom right no-repeat;
+}
+
+.block_with_rounded_corners .list_decorative_dark a:active, .block_with_rounded_corners_2 .list_decorative_dark a:active {
+ background:transparent; /* Fixes problem in IE (dotted line disappears) */
+}
+
+/* End of block_with_rounded_corners */

@@ -1,3 +1,8 @@
+# Ignore gigantic files
+babynames-combined-nation.csv
+babynames-combined-states.csv
+__pycache__/
+
 .DS_Store
 *.gem
 *.rbc

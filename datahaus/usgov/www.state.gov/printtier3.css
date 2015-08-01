@@ -1,0 +1,5 @@
+/* footer */
+#footer-links, #sitemap-links {display:none;}
+
+/* show the highlights text header */
+h3.highlights-headline span { display:block; }

@@ -1,0 +1,31 @@
+/* dropdown menus */
+
+/* shared nav assets */
+/* level 01 */
+/*ul#user-nav li#un-corner a span, ul#global-nav li#gn-corner a span {display:none;}
+ul.user-nav-dd, ul.global-nav-dd {position:absolute;}*/
+ul.user-nav-dd li, ul.global-nav-dd li {float:left;}
+ul.user-nav-dd li.hover, ul.global-nav-dd li.hover {position:relative;}
+/* level 02 */
+ul.user-nav-dd ul, ul.global-nav-dd ul {width:232px;visibility:hidden;position:absolute;top:100%;left:0;/*z-index:20;*/}
+ul.user-nav-dd ul li a, ul.global-nav-dd ul li a {margin:1px 13px;border-right:none;display:inline-block;}
+
+/* user nav dropdown */
+/* user nav dropdown - level 01 */
+ul.user-nav-dd li a {font-size:11px;font-weight:normal;text-decoration:none;display:block;}
+/* user nav dropdown - level 02 */
+ul.user-nav-dd ul {padding:28px 0px 28px 0px;background:/*#af0f23*/#dedede url("http://www.state.gov/images/2013/bkg-global-nav-sub.png") 0px 0px repeat-x;border:1px solid #666;border-top:none;/*line-height:1.2em;*/}
+ul.user-nav-dd ul li {border-bottom:1px solid /*#bc929a*/#d8d9da;float:none;}
+ul.user-nav-dd ul li a {color:/*#fff*/#000;}
+ul.user-nav-dd ul li.last {border-bottom:none;}
+ul.user-nav-dd ul li.hover, ul.user-nav-dd ul li.hover a, ul.user-nav-dd ul li:hover, ul.user-nav-dd ul li a:hover {color:#000;background:/*#eae6ce*/#ccc;cursor:pointer;cursor:hand;}
+
+/* global nav dropdown */
+/* global nav dropdown - level01 */
+ul.global-nav-dd li a {font-size:11px;font-weight:normal;text-decoration:none;display:block;}
+/* global nav dropdown - level02 */
+ul.global-nav-dd ul {padding:28px 0;background:/*#eae6cd*/#dedede url("http://www.state.gov/images/2013/bkg-global-nav-sub.png") 0px 0px repeat-x;border:1px solid #666;border-top:none;/*line-height:1.2em;*/}
+ul.global-nav-dd ul li {border-bottom:1px solid #d8d9da;float:none;}
+ul.global-nav-dd ul li a {color:#185a9c;}
+ul.global-nav-dd ul li.last {border-bottom:none;}
+ul.global-nav-dd ul li.hover, ul.global-nav-dd ul li.hover a, ul.global-nav-dd ul li:hover, ul.global-nav-dd ul li a:hover {color:#fff;background:#609bc8;cursor:pointer;cursor:hand;}

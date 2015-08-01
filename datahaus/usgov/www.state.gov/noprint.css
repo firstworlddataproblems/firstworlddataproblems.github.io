@@ -1,0 +1,6 @@
+/* when not printing, these things should be hidden */
+
+#banner4print, #banner4printie6 {display:none;}
+
+.hidden {display:none};
+

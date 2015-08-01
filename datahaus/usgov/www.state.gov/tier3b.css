@@ -1,0 +1,101 @@
+/* tier 3 specific styles */
+
+/* necessary clear fixes - tier 3 */
+#tier3-content:after {content:".";display:block;height:0;clear:both;visibility:hidden;/*zoom:1;*/}
+
+#tier3-content {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;width:690px;}
+
+/*#tier3-wide-photo {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;float:left;}*/
+#masthead-map {margin:0px;padding:0px;width:690px;height:119px;background:url("bkg-masthead-map.jpg") 0px 0px no-repeat;}
+
+/* breadcrumb trail */
+#breadcrumb-trail {margin:0px;padding:12px 38px 8px 38px;border-top:4px solid /*#b30016*/ #036;background:#fff url("bkg-breadcrumb-trail.gif") 0px 100% repeat-x;clear:left;}
+p#breadcrumbs {font-size:11px;color:#4d4d4d;line-height:17px;display:inline;}
+p#breadcrumbs a {margin:0px;padding:0px;color:#185a9c;text-decoration:none;display:inline;font-size:11px;font-weight:normal;line-height:16px;}
+p#breadcrumbs a:hover {text-decoration:underline;}
+p#breadcrumbs a.selected {color:#4d4d4d;}
+
+/* tier 3 local nav */
+#tier3-local-nav {margin:18px 0px 0px 38px;padding:0px;float:left;}
+ul#local-nav.level01 {width:140px;margin:8px;}
+ul#local-nav.level01 li {margin:10px 0px 0px 0px;padding:0px /*10px*/ 0px 0px 12px;background:transparent url("red-arrow.png") 0px 4px no-repeat;}
+ul#local-nav.level01 li.selected {margin:10px 0px 0px 0px;padding:0px /*10px*/ 0px 0px 12px;background:transparent url("grey-arrow.png") 0px 4px no-repeat;}
+ul#local-nav.level01 li a {font-size:11px;font-weight:bold;color:#185a9c;text-decoration:none;line-height:14px;display:block;}
+ul#local-nav.level01 li a:hover {text-decoration:underline;}
+ul#local-nav li ul.level02 {width:148px;}
+ul#local-nav li ul.level02 li {margin:10px 0px 0px 0px;padding:0px;background:none;}
+ul#local-nav li ul.level02 li a {font-size:11px;color:#185a9c;font-weight:normal;text-decoration:none;line-height:14px;display:block;}
+ul#local-nav li ul.level02 li a.selected {color:#666;}
+ul#local-nav li ul.level02 li a:hover {text-decoration:underline;}
+
+#tier3-landing-content {margin:10px 0px 10px 0px;padding:0px;width:490px;float:left;font-size:12px;line-height:20px;color:#252525;overflow:hidden;}
+#tier3-landing-content-wide {margin:10px 0px 10px 0px;padding:0px;width:650px;float:left;font-size:12px;line-height:20px;color:#252525;overflow:hidden;}
+#tier3-landing-content-wide ol, #tier3-landing-content-wide ul, #tier3-landing-content ol, #tier3-landing-content ul {margin-left: 0; padding-left: 2.5em; }
+#tier3-landing-content ul, #tier3-landing-content-wide ul {margin-bottom:10px;list-style: disc; }
+
+/*
+#tier3-landing-content-wide ol, #tier3-landing-content ol {list-style: decimal; }
+*/
+
+/*
+h2.tier3-headline {margin:0px 0px 2px 0px;padding:0px;font-size:24px;color:#a22538;}
+*/
+h2.tier3-headline {margin:0px 0px 12px 0px;padding:0px;font-size:18px;color:#a22538;font-weight:400;normal;letter-spacing: -.05em;}
+#tier3-landing-content h2.tier3-headline {width:350px;}
+#tier3-landing-content-wide h2.tier3-headline {width:500px;}
+
+#tier3-landing-content p {margin:0px 0px 10px 0px;padding:0px;font-size:12px;line-height:20px;color:#252525;}
+#tier3-landing-content p a, #tier3-landing-content-wide p a {color:#2664a2;text-decoration:none;}
+#tier3-landing-content p a:hover, #tier3-landing-content-wide p a:hover {text-decoration:underline;}
+
+#tier3-landing-content h3 {margin:0px 0px 5px 0px;padding:4px 0px 0px 0px;font-size:16px;font-weight:bold;line-height:26px;color:#4c4c4c;}
+#tier3-landing-content h4 {margin:0px 0px 5px 0px;padding:4px 0px 0px 0px;font-size:14px;font-weight:bold;line-height:26px;color:#4c4c4c;}
+
+/* highlights - tier3 */
+#highlights-tier3-short {/*margin:30px 0px 12px 0px;padding:0px 15px 20px 20px;*/background:#dedede url("bkg-highlights-short02.png") 0px 0px repeat-x;overflow:hidden;}
+#highlights-tier3-long {margin:30px 0px 12px 0px;padding:0px 15px 20px 20px;background:#eae6cd url("bkg-highlights-tall.png") 0px 0px repeat-x;}
+/* custom div could be inside highlights - this helps IE6.. maybe others */
+#highlights-tier3-short div {overflow:hidden;}
+
+h3.highlights-headline {margin:10px 10px 10px 10px;width:67px;height:16px;background:url("hdr-highlights.png") 0px 0px no-repeat;}
+h3.highlights-headline span {display:none;}
+h3.learnmore-headline {margin:10px;width:77px;height:12px;background:url("hdr-learn-more.png") 0px 0px no-repeat;}
+h3.learnmore-headline span {display:none;}
+
+#highlights-tier3-short dl, #highlights-tier3-long dl {/*margin:0px 15px 0px 20px;*/padding:0px 0px 12px 0px;}
+#highlights-tier3-short dl dt strong a, #highlights-tier3-long dl dt strong a {font-size:12px;font-weight:bold;line-height:17px;color:#185a9c;text-decoration:none;}
+#highlights-tier3-short dl dt strong a:hover, #highlights-tier3-long dl dt strong a:hover {text-decoration:underline;}
+#highlights-tier3-short dl dd.caps, #highlights-tier3-long dl dd.caps {margin:0px;padding:0px;font-size:10px;font-weight:normal;color:#000;line-height:17px;text-transform:uppercase;letter-spacing:.6px;}
+#highlights-tier3-short dl dd, #highlights-tier3-long dl dd {margin:0px;padding:2px 0px 0px 0px;font-size:12px;font-weight:normal;color:#1d252f;line-height:17px;}
+
+#highlights-tier3-short, #highlights-tier3-long, #learnmore-tier2-short, #learnmore-tier2-long {font-size:12px;font-weight:normal;color:#1d252f;line-height:17px;}
+#highlights-tier3-short a, #highlights-tier3-long a, #learnmore-tier2-short a, #learnmore-tier2-long a {font-size:11px;}
+
+/* stay connected with state.gov - modded for tier 3 layout */
+#stay-connected {padding:15px 0px 15px 0px;background:url("bkg-stay-connected.gif") repeat-x scroll 0 0 transparent;}
+#social-networking-icons {margin-bottom:0px;}
+p a#subscribe-to-updates {margin-top:12px;}
+
+/* some room for images to breath */
+#highlights-tier3-short img, #tier3-landing-content img {padding:5px;}
+#highlights-tier3-short table img, #tier3-landing-content table img {padding-top:5px;padding-bottom:5px;}
+
+/* global header styles */
+h1 {color:#9c0000;font-family:verdana;font-size: 10pt;font-weight:bold;text-transform:uppercase;}
+h2 {color:#003366;font-family:verdana;font-size: 10pt;font-weight:bold;}
+h3 {color:black;font-family:verdana;font-size: 9pt;font-weight:bold;text-transform:uppercase;}
+h4 {color:black;font-family:verdana;font-size: 9pt;font-weight:bold;}
+h5 {color:black;font-family:verdana;font-size: 8pt;font-weight:bold;text-transform:uppercase;}
+h6 {color:black;font-family:verdana;font-size: 8pt;font-weight:normal;font-style:italic;}
+
+.whatsnew-spacing {height:10px;}
+
+/* oig fix */
+#body-col02-row02 ul {list-style: disc;}
+
+a.group_label {
+    font-weight: normal !important;
+}
+span.doc_description a {font-weight:normal;}
+
+#share-icons-cat img {padding:0;}

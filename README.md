@@ -9,6 +9,11 @@ Some things so far (in the `/datahaus` directory):
 - [List of Pan-Am Games athletes](datahaus/panamv3prod.pan-am-provisional_athletes.pdf), a problem mentioned on NICAR-L in terms of aggregating counts of athletes by country and gender and event.
 
 
+Todos and reminders:
+
+- Lobbying data and Denny Hastert
+- Congressional expenditure data and Sunlight Foundation
+
 
 
 Downloading websites:
